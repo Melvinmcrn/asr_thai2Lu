@@ -76,6 +76,12 @@ Step ::
     utils/prepare_lang.sh to check in your directory
     eg.
         utils/prepare_lang.sh 'data/dict/' 'SIL' ' data/dict/temp' 'data/lang'
+     
+     utils/prepare_lang.sh --position-dependent-phones false <RAW_DICT_PATH> <OOV> <TEMP_DIR> <OUTPUT_DIR>
+        <RAW_DICT_PATH>: data/local/dict
+        <OOV>: "<SIL>"
+        <TEMP_DIR>: Could be anywhere. I'll just put a new directory tmp inside dict.
+        <OUTPUT_DIR>: This output will be used in further training. Set it to data/lang.
 
 
 3. Coming soon
