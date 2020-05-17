@@ -1,5 +1,6 @@
 # Readme First 
-
+part of class project
+https://github.com/ekapolc/ASR_classproject
 
 Step ::
 
@@ -27,7 +28,7 @@ Step ::
             1.1.1.1 docker images 
             1.1.1.2 find copy burin010n/kaldi  and copy #IMAGE ID  
     1.2 # make sure diratory format in  ../data in docker is
-        data
+        #data
         ├───train_yesno
         │   ├───text
         │   ├───utt2spk
@@ -38,12 +39,12 @@ Step ::
             ├───utt2spk
             ├───spk2utt
             └───wav.scp
-        └───dict
+        #└───dict
             ├───lexicon.txt
             ├───silence_phones.txt
             ├───optional_silence.txt
             └───phones.txt
-        └───sound
+        #└───sound
             ├───text
             ├───utt2spk
             ├───spk2utt
