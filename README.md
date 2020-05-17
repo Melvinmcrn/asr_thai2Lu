@@ -4,13 +4,13 @@ https://github.com/ekapolc/ASR_classproject
 
 Step ::
 
-0. Install docker kaldi image
-    # you must have docker in you computer 
-    # kaldi is most capitible with linux base OS
+#0. Install docker kaldi image
+    you must have docker in you computer 
+    kaldi is most capitible with linux base OS
 
     docker run -it -v <path_to_backup_folder>:/data burin010n/kaldi /bin/bash
 
-1. Mount data folder to docker 
+#1. Mount data folder to docker 
 
     1.1 Make sure 
         "$(pwd)" == Datapath which these folder are extracted. 
@@ -27,8 +27,8 @@ Step ::
         # kaldi_id can check from 
             1.1.1.1 docker images 
             1.1.1.2 find copy burin010n/kaldi  and copy #IMAGE ID  
-    1.2 # make sure diratory format in  ../data in docker is
-        #data
+   1.2 make sure diratory format in  ../data in docker is
+        data
         ├───train_yesno
         │   ├───text
         │   ├───utt2spk
@@ -39,20 +39,19 @@ Step ::
             ├───utt2spk
             ├───spk2utt
             └───wav.scp
-        #└───dict
+        └───dict
             ├───lexicon.txt
             ├───silence_phones.txt
             ├───optional_silence.txt
             └───phones.txt
-        #└───sound
+        └───sound
             ├───text
             ├───utt2spk
             ├───spk2utt
             └───wav.scp
 
-2. Generate Dict
+# 2. Generate Dict
 
-# dict 
 utils/prepare_lang.sh 'data/dict/' 'SIL' ' data/dict/temp' 'data/lang'
 
 
