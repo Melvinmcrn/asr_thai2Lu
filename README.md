@@ -77,7 +77,7 @@ Step ::
     eg.
         utils/prepare_lang.sh 'data/dict/' 'SIL' ' data/dict/temp' 'data/lang'
      
-     utils/prepare_lang.sh --position-dependent-phones false <RAW_DICT_PATH> <OOV> <TEMP_DIR> <OUTPUT_DIR>
+     utils/prepare_lang.sh <RAW_DICT_PATH> <OOV> <TEMP_DIR> <OUTPUT_DIR>
         <RAW_DICT_PATH>: data/local/dict
         <OOV>: "<SIL>"
         <TEMP_DIR>: Could be anywhere. I'll just put a new directory tmp inside dict.
