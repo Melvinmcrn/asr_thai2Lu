@@ -28,26 +28,45 @@ Step ::
             1.1.1.1 docker images 
             1.1.1.2 find copy burin010n/kaldi  and copy #IMAGE ID  
    1.2 make sure diratory format in  ../data in docker is
-        data
+        data 
         ├───train_yesno
+        
         │   ├───text
+        
         │   ├───utt2spk
+        
         │   ├───spk2utt
+        
         │   └───wav.scp
+        
         └───test_yesno
+        
             ├───text
+            
             ├───utt2spk
+            
             ├───spk2utt
+            
             └───wav.scp
+            
         └───dict
+        
             ├───lexicon.txt
+            
             ├───silence_phones.txt
+            
             ├───optional_silence.txt
+            
             └───phones.txt
+            
         └───sound
+        
             ├───text
+            
             ├───utt2spk
+            
             ├───spk2utt
+            
             └───wav.scp
 
 # 2. Generate Dict
