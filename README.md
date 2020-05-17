@@ -28,6 +28,7 @@ Step ::
             1.1.1.1 docker images 
             1.1.1.2 find copy burin010n/kaldi  and copy #IMAGE ID  
    1.2 make sure director format in  ../data in docker is
+   
         data 
         ├───train_yesno
         
@@ -70,9 +71,11 @@ Step ::
             └───wav.scp
 
 # 2. Generate Dict
-run in /kaldi/egs/yesno/s5/ directory in docker
-### utils/prepare_lang.sh to check in your directory
-utils/prepare_lang.sh 'data/dict/' 'SIL' ' data/dict/temp' 'data/lang'
+    run in /kaldi/egs/yesno/s5/ directory in docker
+
+    utils/prepare_lang.sh to check in your directory
+    eg.
+        utils/prepare_lang.sh 'data/dict/' 'SIL' ' data/dict/temp' 'data/lang'
 
 
 3. Coming soon
