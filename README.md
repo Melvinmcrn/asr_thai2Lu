@@ -84,4 +84,26 @@ Step ::
         <OUTPUT_DIR>: This output will be used in further training. Set it to data/lang.
 
 
-3. Coming soon
+# 3. Feature extraction and training
+
+// use this to run  
+// in progess 
+
+steps/make_mfcc.sh --nj  'data/train/' 'data/train/' 'data/mfcc/train/'
+
+curent problem :: 
+    steps/make_mfcc.sh --nj data/train/ data/train/ data/mfcc/train/
+    
+     utils/validate_data_dir.sh: data/train//utt2spk has wrong format.
+     
+    seq: invalid floating point argument: 'data/train/'
+    
+    Try 'seq --help' for more information.
+    
+    steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+    seq: invalid floating point argument: 'data/train/'
+    
+    Try 'seq --help' for more information.
+    Usage: split_scp.pl [--utt2spk=<utt2spk_file>] in.scp out1.scp out2.scp ...
+       or: split_scp.pl -j num-jobs job-id [--one-based] [--utt2spk=<utt2spk_file>] in.scp [out.scp]
+    where 0 <= job-id < num-jobs, or 1 <= job-id <- num-jobs if --one-based.
