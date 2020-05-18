@@ -1,15 +1,16 @@
 # Readme First 
-
+part of class project
+https://github.com/ekapolc/ASR_classproject
 
 Step ::
 
-0. Install docker kaldi image
-    # you must have docker in you computer 
-    # kaldi is most capitible with linux base OS
+#0. Install docker kaldi image
+    you must have docker in you computer 
+    kaldi is most capitible with linux base OS
 
     docker run -it -v <path_to_backup_folder>:/data burin010n/kaldi /bin/bash
 
-1. Mount data folder to docker 
+#1. Mount data folder to docker 
 
     1.1 Make sure 
         "$(pwd)" == Datapath which these folder are extracted. 
@@ -26,33 +27,61 @@ Step ::
         # kaldi_id can check from 
             1.1.1.1 docker images 
             1.1.1.2 find copy burin010n/kaldi  and copy #IMAGE ID  
-    1.2 # make sure diratory format in  ../data in docker is
-        data
+   1.2 make sure director format in  ../data in docker is
+   
+        data 
         ├───train_yesno
+        
         │   ├───text
+        
         │   ├───utt2spk
+        
         │   ├───spk2utt
+        
         │   └───wav.scp
+        
         └───test_yesno
+        
             ├───text
+            
             ├───utt2spk
+            
             ├───spk2utt
+            
             └───wav.scp
+            
         └───dict
+        
             ├───lexicon.txt
+            
             ├───silence_phones.txt
+            
             ├───optional_silence.txt
+            
             └───phones.txt
+            
         └───sound
+        
             ├───text
+            
             ├───utt2spk
+            
             ├───spk2utt
+            
             └───wav.scp
 
-2. Generate Dict
+# 2. Generate Dict
+    run in /kaldi/egs/yesno/s5/ directory in docker
 
-# dict 
-utils/prepare_lang.sh 'data/dict/' 'SIL' ' data/dict/temp' 'data/lang'
+    utils/prepare_lang.sh to check in your directory
+    eg.
+        utils/prepare_lang.sh 'data/dict/' 'SIL' ' data/dict/temp' 'data/lang'
+     
+     utils/prepare_lang.sh <RAW_DICT_PATH> <OOV> <TEMP_DIR> <OUTPUT_DIR>
+        <RAW_DICT_PATH>: data/local/dict
+        <OOV>: "<SIL>"
+        <TEMP_DIR>: Could be anywhere. I'll just put a new directory tmp inside dict.
+        <OUTPUT_DIR>: This output will be used in further training. Set it to data/lang.
 
 
 3. Coming soon
